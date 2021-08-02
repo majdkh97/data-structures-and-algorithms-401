@@ -83,4 +83,27 @@ public class LinkedList {
             }
         }
     }
+
+    public int kthfromend(int k){
+        Node prev = null;
+        Node current = head ;
+        Node next;
+
+        while(current!=null){
+            next = current.next;
+            current.next = prev;
+            prev=current;
+            current = next;
+        }
+        head = prev;
+        int counter = 0;
+        while (head != null) {
+            if(counter==k){
+                return head.value;
+            }
+            counter++;
+            head=head.next;
+        }
+        return -1;
+    }
 }
