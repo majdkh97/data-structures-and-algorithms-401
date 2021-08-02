@@ -83,7 +83,7 @@ public class LinkedList {
             }
         }
     }
-
+    
     public int kthfromend(int k){
         Node prev = null;
         Node current = head ;
