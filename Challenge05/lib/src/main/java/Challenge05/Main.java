@@ -8,7 +8,6 @@ public class Main {
         list.append(1);
         list.append(9);
 
-//        list.print();
 
         boolean includes = list.includes(5);
         System.out.println(includes);
@@ -34,6 +33,12 @@ public class Main {
         list.insertBefore(5, 7);
         list.print();
         String str2 = list.toString1();
-        System.out.println(str2);
+        System.out.println(str2+"\n");
+
+
+        int x = list.kthfromend(0);
+//        String str3 = list.toString1();
+//        System.out.println(str3);
+        System.out.println(x);
     }
 }
