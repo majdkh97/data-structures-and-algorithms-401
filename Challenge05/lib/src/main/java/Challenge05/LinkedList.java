@@ -3,49 +3,84 @@ package Challenge05;
 public class LinkedList {
     Node head;
 
-    public void insert(int value){
+    public void append(int value) {
         Node node = new Node();
         node.value = value;
-        node.pointer = null;
-        if(head==null){
-            head=node;
-        }
-        else{
-            Node n =head;
-            while(n.pointer!=null){
-                n = n.pointer;
+        node.next = null;
+        if (head == null) {
+            head = node;
+        } else {
+            Node n = head;
+            while (n.next != null) {
+                n = n.next;
             }
-            n.pointer = node;
+            n.next = node;
         }
     }
 
-    public boolean includes(int value){
+    public boolean includes(int value) {
         Node node = head;
-        while(node!=null){
-            if(node.value==value){
+        while (node != null) {
+            if (node.value == value) {
                 return true;
             }
-            node = node.pointer;
+            node = node.next;
         }
         return false;
     }
 
-    public String toString1(){
+    public String toString1() {
         Node node = head;
-        String str ="";
-        while(node!=null){
-            str = str + " { " +node.value+ " } ->" ;
-            node = node.pointer;
+        String str = "";
+        while (node != null) {
+            str = str + " { " + node.value + " } ->";
+            node = node.next;
         }
         str = str + " NULL";
         return str;
     }
 
-    public void print(){
+    public void print() {
         Node node = head;
-        while(node!=null){
+        while (node != null) {
             System.out.println(node.value);
-            node = node.pointer;
+            node = node.next;
+        }
+    }
+
+    public void insertAfter(int value, int newValue) {
+        Node newNode = new Node();
+        newNode.value = newValue;
+
+        Node n = head;
+        while (n != null) {
+            if (n.value == value) {
+                newNode.next = n.next;
+                n.next = newNode;
+                return;
+            }
+            n = n.next;
+        }
+    }
+
+    public void insertBefore(int value, int newValue) {
+        Node newNode = new Node();
+        newNode.value = newValue;
+
+        Node n = head;
+
+        if (value == head.value) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+            while (n != null) {
+                if (n.next.value == value) {
+                    newNode.next = n.next;
+                    n.next = newNode;
+                    return;
+                }
+                n = n.next;
+            }
         }
     }
 }

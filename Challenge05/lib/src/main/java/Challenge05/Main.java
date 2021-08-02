@@ -3,9 +3,10 @@ package Challenge05;
 public class Main {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.insert(5);
-        list.insert(3);
-        list.insert(1);
+        list.append(5);
+        list.append(3);
+        list.append(1);
+        list.append(9);
 
 //        list.print();
 
@@ -20,5 +21,19 @@ public class Main {
 
         String str = list.toString1();
         System.out.println(str);
+
+        System.out.println("\n");
+        System.out.println("CodeChallenge06");
+        System.out.println("\n");
+
+        list.insertAfter(9, 6);
+        String str1 = list.toString1();
+        list.print();
+        System.out.println(str1);
+        System.out.println("\n");
+        list.insertBefore(5, 7);
+        list.print();
+        String str2 = list.toString1();
+        System.out.println(str2);
     }
 }
