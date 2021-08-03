@@ -106,4 +106,33 @@ public class LinkedList {
         }
         return -1;
     }
+
+
+    public LinkedList zip(LinkedList a , LinkedList b){
+       LinkedList c = new LinkedList();
+       Node n1 = a.head;
+       Node n2 = b.head;
+       while(n1 != null || n2 != null)
+       {
+           if(n1!=null&&n2!=null)
+           {
+               c.append(n1.value);
+               c.append(n2.value);
+
+               n1=n1.next;
+               n2=n2.next;
+           }
+           else if (n1==null)
+           {
+               c.append(n2.value);
+               n2=n2.next;
+           }
+           else if (n2==null)
+           {
+               c.append(n1.value);
+               n1=n1.next;
+           }
+       }
+       return c;
+    }
 }

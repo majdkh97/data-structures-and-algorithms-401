@@ -40,5 +40,18 @@ public class Main {
 //        String str3 = list.toString1();
 //        System.out.println(str3);
         System.out.println(x);
+
+
+        LinkedList listA = new LinkedList();
+        listA.append(1);
+        listA.append(3);
+
+        LinkedList listB = new LinkedList();
+        listB.append(2);
+
+        LinkedList zipOutput = new LinkedList();
+        zipOutput = zipOutput.zip(listA,listB);
+        System.out.println(zipOutput.toString1());
+
     }
 }

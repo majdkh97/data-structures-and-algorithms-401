@@ -52,7 +52,7 @@ class LibraryTest {
         list.append(1);
         list.append(9);
 
-        int test1 = list.kthfromend(4);
+        int test1 = list.kthfromend(5);
         assertEquals(-1,test1);
     }
 
@@ -99,5 +99,51 @@ class LibraryTest {
 
         int x = list.kthfromend(2);
         assertEquals(3,x);
+    }
+
+    @Test
+    void Challenge08test1(){
+        LinkedList listA = new LinkedList();
+        listA.append(1);
+        listA.append(3);
+        listA.append(2);
+        LinkedList listB = new LinkedList();
+        listB.append(5);
+        listA.append(9);
+        listA.append(4);
+        LinkedList zipOutput = new LinkedList();
+        zipOutput = zipOutput.zip(listA,listB);
+        System.out.println(zipOutput.toString1());
+        assertEquals(" { 1 } -> { 5 } -> { 3 } -> { 2 } -> { 9 } -> { 4 } -> NULL",zipOutput.toString1());
+    }
+
+    @Test
+    void Challenge08test2(){
+        LinkedList listA = new LinkedList();
+        listA.append(1);
+        listA.append(3);
+        LinkedList listB = new LinkedList();
+        listB.append(5);
+        listA.append(9);
+        listA.append(4);
+        LinkedList zipOutput = new LinkedList();
+        zipOutput = zipOutput.zip(listA,listB);
+        System.out.println(zipOutput.toString1());
+        assertEquals(" { 1 } -> { 5 } -> { 3 } -> { 9 } -> { 4 } -> NULL",zipOutput.toString1());
+    }
+
+    @Test
+    void Challenge08test3(){
+        LinkedList listA = new LinkedList();
+        listA.append(1);
+        listA.append(3);
+        listA.append(2);
+        LinkedList listB = new LinkedList();
+        listB.append(5);
+        listB.append(9);
+        LinkedList zipOutput = new LinkedList();
+        zipOutput = zipOutput.zip(listA,listB);
+        System.out.println(zipOutput.toString1());
+        assertEquals(" { 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> NULL",zipOutput.toString1());
     }
 }
