@@ -4,4 +4,4 @@
 Merge two linked lists 
 
 ### Whiteboard Process
-![alt text](codechallenge08.png)
+![alt text](CodeChallenge08.png)
