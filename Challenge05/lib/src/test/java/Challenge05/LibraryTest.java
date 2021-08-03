@@ -7,6 +7,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
+    @Test void testsCC05(){
+        LinkedList list1 = new LinkedList();
+        System.out.println(list1);
+        assertEquals("Challenge05.LinkedList@7f416310",list1.toString());
+        list1.append(5);
+        String str = list1.toString1();
+        assertEquals(" { 5 } -> NULL",str);
+        assertEquals(5, list1.head.value);
+        list1.append(6);
+        list1.append(7);
+        String str1 = list1.toString1();
+        assertEquals( " { 5 } -> { 6 } -> { 7 } -> NULL",str1);
+        assertEquals(true,list1.includes(6));
+        assertEquals(false,list1.includes(8));
+        list1.append(9);
+        String str2 = list1.toString1();
+        assertEquals( " { 5 } -> { 6 } -> { 7 } -> { 9 } -> NULL",str2);
+    }
+
     @Test void tests(){
         LinkedList list1 = new LinkedList();
         list1.append(1);
