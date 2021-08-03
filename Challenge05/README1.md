@@ -4,4 +4,4 @@
 Given a linked list do insertion exercises 
 
 ### Whiteboard Process
-![alt text]()
+![alt text](codechallenge06.png)
