@@ -2,7 +2,7 @@ package Challenge05;
 
 public class LinkedList {
     Node head;
-
+    Node tail;
     public void append(int value) {
         Node node = new Node();
         node.value = value;
@@ -27,6 +27,13 @@ public class LinkedList {
             node = node.next;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "LinkedList{" +
+                "head=" + head +
+                '}';
     }
 
     public String toString1() {
@@ -107,6 +114,22 @@ public class LinkedList {
         return -1;
     }
 
+    public boolean palindrome(LinkedList a){
+        Node n1 = a.head;
+        Node n2 = n1;
+        Node n3 = null;
+        System.out.println(n2.value);
+        while(n1!=null){
+            n3=n1;
+            n1=n1.next;
+        }
+        System.out.println(n3.value);
+        if(n2.value==n3.value){
+            return true;
+        }
+        else
+            return false;
+    }
 
     public LinkedList zip(LinkedList a , LinkedList b){
        LinkedList c = new LinkedList();
