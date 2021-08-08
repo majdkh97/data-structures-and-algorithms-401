@@ -5,6 +5,6 @@ implement a queue using instances of stack data structure and operations on them
 
 
 ### Whiteboard Process
-![alt text](codechallenge11.png)
+![alt text](CodeChallenge11.png)
 
 
