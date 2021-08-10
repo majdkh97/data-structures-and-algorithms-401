@@ -5,34 +5,67 @@ package Challenge10;
 
 public class Library {
     public static void main(String[] args) {
-        Queue<Integer> queue = new Queue<>();
+//        Queue<Integer> queue = new Queue<>();
 //        queue.enQueue(10);
 //        queue.enQueue(20);
 //        queue.enQueue(30);
 //        queue.enQueue(40);
 
-        queue.displayQueue();
-        System.out.println("\n");
-        queue.peek();
+//        queue.displayQueue();
+//        System.out.println("\n");
+//        queue.peek();
 //        System.out.println(queue.deQueue());
 //        queue.displayQueue();
 
-        PseudoQueue<Integer> q1 = new PseudoQueue<>();
-        q1.enQueue(1);
-        q1.enQueue(2);
-        q1.enQueue(3);
-        q1.enQueue(4);
+//        PseudoQueue<Integer> q1 = new PseudoQueue<>();
+//        q1.enQueue(1);
+//        q1.enQueue(2);
+//        q1.enQueue(3);
+//        q1.enQueue(4);
+//
+//        q1.stack1.displayStack();
+//        System.out.println("\n");
+//
+//        q1.deQueue();
+//        q1.stack1.displayStack();
+//        System.out.println("\n");
 
-        q1.stack1.displayStack();
+        Dog dog1 = new Dog("dog1");
+        Cat cat1 = new Cat("cat1");
+        Dog dog2 = new Dog("dog2");
+        Cat cat2 = new Cat("cat2");
+
+        AnimalShelter animalShelter = new AnimalShelter();
+        animalShelter.enQueue(dog1);
+        animalShelter.enQueue(cat1);
+        animalShelter.enQueue(dog2);
+        animalShelter.enQueue(cat2);
+
+
+
+
+        System.out.println(animalShelter.animalQueue.size());
+        System.out.println(animalShelter);
         System.out.println("\n");
 
-        q1.deQueue();
-        q1.stack1.displayStack();
+        System.out.println(animalShelter.catQueue.size());
+        animalShelter.displayCats();
+        System.out.println("\n");
+
+        System.out.println(animalShelter.dogQueue.size());
+        animalShelter.displayDogs();
         System.out.println("\n");
 
 
+        animalShelter.deQueue("dog");
+//        animalShelter.deQueue("dog");
+
+        animalShelter.deQueue("cat");
+        animalShelter.deQueue("cat");
 
 
-
+        System.out.println(animalShelter.dogQueue.size());
+        animalShelter.displayDogs();
+        System.out.println("\n");
     }
 }

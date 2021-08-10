@@ -74,4 +74,35 @@ class LibraryTest {
         assertEquals(2,q1.stack1.peek());
     }
 
+
+    @Test void testAnimalShelter(){
+        Dog dog1 = new Dog("dog1");
+        Cat cat1 = new Cat("cat1");
+        Dog dog2 = new Dog("dog2");
+        Cat cat2 = new Cat("cat2");
+
+        AnimalShelter animalShelter = new AnimalShelter();
+        animalShelter.enQueue(dog1);
+        animalShelter.enQueue(cat1);
+        animalShelter.enQueue(dog2);
+        animalShelter.enQueue(cat2);
+
+
+
+        assertEquals(2,animalShelter.dogQueue.size());
+
+
+        assertEquals(2,animalShelter.catQueue.size());
+
+        animalShelter.deQueue("dog");
+        assertEquals(1,animalShelter.dogQueue.size());
+        animalShelter.deQueue("cat");
+        animalShelter.deQueue("cat");
+        assertEquals(0,animalShelter.catQueue.size());
+        assertEquals(null,animalShelter.deQueue("potato"));
+        assertEquals(null,animalShelter.deQueue("cat"));
+
+
+
+    }
 }
