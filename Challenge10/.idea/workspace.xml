@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8f9c98b-e7f9-4081-bcba-f880dcfcc2a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/NodeT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/Brackets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/Challenge10/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/test/java/Challenge10/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/Challenge10/LibraryTest.java" afterDir="false" />
@@ -67,7 +65,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="JUnit.Test">
+  <component name="RunManager" selected="Application.Library">
     <configuration name="BinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Challenge10.BinaryTree" />
       <module name="Challenge10.lib.main" />
@@ -174,8 +172,8 @@
       <item itemvalue="Application.BinaryTree" />
       <item itemvalue="Gradle.LibraryTest" />
       <item itemvalue="Gradle.LibraryTest.testAnimalShelter" />
-      <item itemvalue="JUnit.Test" />
       <item itemvalue="Gradle.LibraryTest.binarySearchTree" />
+      <item itemvalue="JUnit.Test" />
     </list>
     <recent_temporary>
       <list>

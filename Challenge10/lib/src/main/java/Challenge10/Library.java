@@ -19,22 +19,28 @@ public class Library {
 //        tree.postOrder(tree.root);
 //        System.out.println("\n");
 
-        tree.add(6);
-        tree.add(10);
-        tree.add(8);
-        tree.add(9);
-        tree.add(3);
-        tree.add(5);
-        tree.add(11);
-        tree.add(7);
-        tree.preOrder(tree.root);
-        System.out.println("\n");
-        tree.inOrder(tree.root);
-        System.out.println("\n");
-        tree.postOrder(tree.root);
-        System.out.println("\n");
+//        tree.add(6);
+//        tree.add(10);
+//        tree.add(8);
+//        tree.add(9);
+//        tree.add(3);
+//        tree.add(5);
+//        tree.add(11);
+//        tree.add(7);
+//        tree.preOrder(tree.root);
+//        System.out.println("\n");
+//        tree.inOrder(tree.root);
+//        System.out.println("\n");
+//        tree.postOrder(tree.root);
+//        System.out.println("\n");
+//
+//        System.out.println(tree.contains(5));
 
-        System.out.println(tree.contains(5));
+        String str = "{}{Code}[Fellows](())";
+
+        // Function call
+       Brackets bracket = new Brackets();
+        System.out.println(bracket.validateBrackets(str));
 
 
     }
