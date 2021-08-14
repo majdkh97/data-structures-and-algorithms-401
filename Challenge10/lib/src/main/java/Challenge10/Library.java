@@ -5,67 +5,37 @@ package Challenge10;
 
 public class Library {
     public static void main(String[] args) {
-//        Queue<Integer> queue = new Queue<>();
-//        queue.enQueue(10);
-//        queue.enQueue(20);
-//        queue.enQueue(30);
-//        queue.enQueue(40);
-
-//        queue.displayQueue();
-//        System.out.println("\n");
-//        queue.peek();
-//        System.out.println(queue.deQueue());
-//        queue.displayQueue();
-
-//        PseudoQueue<Integer> q1 = new PseudoQueue<>();
-//        q1.enQueue(1);
-//        q1.enQueue(2);
-//        q1.enQueue(3);
-//        q1.enQueue(4);
+        BinarySearchTree tree = new BinarySearchTree();
+//        tree.root = new NodeT(1);
+//        tree.root.left = new NodeT(2);
+//        tree.root.right = new NodeT(3);
+//        tree.root.left.left = new NodeT(4);
+//        tree.root.left.right = new NodeT(5);
 //
-//        q1.stack1.displayStack();
+//        tree.preOrder(tree.root);
 //        System.out.println("\n");
-//
-//        q1.deQueue();
-//        q1.stack1.displayStack();
+//        tree.inOrder(tree.root);
+//        System.out.println("\n");
+//        tree.postOrder(tree.root);
 //        System.out.println("\n");
 
-        Dog dog1 = new Dog("dog1");
-        Cat cat1 = new Cat("cat1");
-        Dog dog2 = new Dog("dog2");
-        Cat cat2 = new Cat("cat2");
-
-        AnimalShelter animalShelter = new AnimalShelter();
-        animalShelter.enQueue(dog1);
-        animalShelter.enQueue(cat1);
-        animalShelter.enQueue(dog2);
-        animalShelter.enQueue(cat2);
-
-
-
-
-        System.out.println(animalShelter.animalQueue.size());
-        System.out.println(animalShelter);
+        tree.add(6);
+        tree.add(10);
+        tree.add(8);
+        tree.add(9);
+        tree.add(3);
+        tree.add(5);
+        tree.add(11);
+        tree.add(7);
+        tree.preOrder(tree.root);
+        System.out.println("\n");
+        tree.inOrder(tree.root);
+        System.out.println("\n");
+        tree.postOrder(tree.root);
         System.out.println("\n");
 
-        System.out.println(animalShelter.catQueue.size());
-        animalShelter.displayCats();
-        System.out.println("\n");
-
-        System.out.println(animalShelter.dogQueue.size());
-        animalShelter.displayDogs();
-        System.out.println("\n");
+        System.out.println(tree.contains(5));
 
 
-        animalShelter.deQueue("dog");
-//        animalShelter.deQueue("dog");
-
-        animalShelter.deQueue("cat");
-        animalShelter.deQueue("cat");
-
-
-        System.out.println(animalShelter.dogQueue.size());
-        animalShelter.displayDogs();
-        System.out.println("\n");
     }
 }

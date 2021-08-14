@@ -102,7 +102,26 @@ class LibraryTest {
         assertEquals(null,animalShelter.deQueue("potato"));
         assertEquals(null,animalShelter.deQueue("cat"));
 
+    }
+
+    @Test void binarySearchTree(){
+        BinarySearchTree tree = new BinarySearchTree();
+        assertNotNull(tree);
+
+        tree.root = new NodeT(1);
+        assertNotNull(tree.root);
+
+        tree.root.left = new NodeT(2);
+        assertNotNull(tree.root.left);
+        tree.root.right = new NodeT(3);
+        assertNotNull(tree.root.right);
 
 
+        tree.preOrder(tree.root);
+        System.out.println("\n");
+        tree.inOrder(tree.root);
+        System.out.println("\n");
+        tree.postOrder(tree.root);
+        System.out.println("\n");
     }
 }
