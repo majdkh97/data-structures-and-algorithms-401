@@ -1,5 +1,9 @@
 package Challenge10;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 public class BinaryTree {
     NodeT root;
 
@@ -43,4 +47,25 @@ public class BinaryTree {
 
         System.out.print(node.value + " ");
     }
+
+    int findMax(){
+        Stack<NodeT>stack = new Stack<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        NodeT current = root;
+        //inorderIterative
+        while(!stack.isEmpty() || current!=null){
+            if(current!=null){
+                stack.push(current);
+                current=current.left;
+            }
+            else{
+                current=stack.pop();
+                list.add(current.value);
+                current=current.right;
+            }
+        }
+        return Collections.max(list);
+    }
+
+
 }
