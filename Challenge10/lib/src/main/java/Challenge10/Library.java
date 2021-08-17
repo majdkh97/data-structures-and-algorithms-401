@@ -5,13 +5,15 @@ package Challenge10;
 
 public class Library {
     public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree();
+        BinaryTree tree = new BinaryTree();
         tree.root = new NodeT(10);
         tree.root.left = new NodeT(22);
         tree.root.right = new NodeT(0);
         tree.root.left.left = new NodeT(39);
+        tree.root.left.left.left = new NodeT(69);
         tree.root.left.right = new NodeT(1);
-        System.out.println(tree.findMax());
+        tree.root.left.right.right = new NodeT(7);
+        System.out.println(tree.breadthFirst(tree));
 //        tree.preOrder(tree.root);
 //        System.out.println("\n");
 //        tree.inOrder(tree.root);

@@ -3,6 +3,7 @@ package Challenge10;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 public class BinaryTree {
     NodeT root;
@@ -67,5 +68,18 @@ public class BinaryTree {
         return Collections.max(list);
     }
 
-
+    public List<Integer> breadthFirst(BinaryTree tree){
+        Queue<NodeT> queue = new Queue<>();
+        queue.enQueue(tree.root);
+        ArrayList<Integer> list = new ArrayList<>();
+        while(!queue.isEmpty()){
+            NodeT tempNode = queue.deQueue();
+            list.add(tempNode.value);
+            if(tempNode.left!=null)
+                queue.enQueue(tempNode.left);
+            if(tempNode.right!=null)
+                queue.enQueue(tempNode.right);
+        }
+        return list;
+    }
 }

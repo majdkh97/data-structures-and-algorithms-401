@@ -4,6 +4,9 @@
 package Challenge10;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -125,5 +128,32 @@ class LibraryTest {
         System.out.println("\n");
     }
 
+    @Test void max(){
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.root = new NodeT(10);
+        tree.root.left = new NodeT(22);
+        tree.root.right = new NodeT(0);
+        tree.root.left.left = new NodeT(39);
+        tree.root.left.left.left = new NodeT(69);
+        tree.root.left.right = new NodeT(1);
+        tree.root.left.right.right = new NodeT(7);
+        assertEquals(69,tree.findMax());
+    }
 
+    @Test void bfs(){
+        BinaryTree tree = new BinaryTree();
+        tree.root = new NodeT(10);
+        tree.root.left = new NodeT(22);
+        tree.root.left.right = new NodeT(69);
+        tree.root.right = new NodeT(0);
+        tree.root.left.left = new NodeT(39);
+        ArrayList<Integer> list =new ArrayList<>();
+        list.add(10);
+        list.add(22);
+        list.add(0);
+        list.add(39);
+        list.add(69);
+        System.out.println(tree.breadthFirst(tree));
+        assertEquals(list,tree.breadthFirst(tree));
+    }
 }
