@@ -77,7 +77,6 @@ class LibraryTest {
         assertEquals(2,q1.stack1.peek());
     }
 
-
     @Test void testAnimalShelter(){
         Dog dog1 = new Dog("dog1");
         Cat cat1 = new Cat("cat1");
@@ -155,5 +154,20 @@ class LibraryTest {
         list.add(69);
         System.out.println(tree.breadthFirst(tree));
         assertEquals(list,tree.breadthFirst(tree));
+    }
+
+    @Test void brackets(){
+        String str = "{}{Code}[Fellows](())";
+        String str1 = "{";
+        String str2 = ")";
+        String str3 = "[}";
+        String str4 = "()[[Extra Characters]]";
+        Brackets bracket = new Brackets();
+
+        assertTrue(bracket.validateBrackets(str));
+        assertFalse(bracket.validateBrackets(str1));
+        assertFalse(bracket.validateBrackets(str2));
+        assertFalse(bracket.validateBrackets(str3));
+        assertTrue(bracket.validateBrackets(str4));
     }
 }

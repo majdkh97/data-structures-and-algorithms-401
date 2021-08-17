@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8f9c98b-e7f9-4081-bcba-f880dcfcc2a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/Challenge10/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/Challenge10/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/Challenge10/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/Challenge10/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/test/java/Challenge10/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/Challenge10/LibraryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme5.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme5.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
