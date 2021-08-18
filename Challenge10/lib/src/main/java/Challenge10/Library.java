@@ -5,15 +5,15 @@ package Challenge10;
 
 public class Library {
     public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree();
-        tree.root = new NodeT(10);
-        tree.root.left = new NodeT(22);
-        tree.root.right = new NodeT(0);
-        tree.root.left.left = new NodeT(39);
-        tree.root.left.left.left = new NodeT(69);
-        tree.root.left.right = new NodeT(1);
-        tree.root.left.right.right = new NodeT(7);
-        System.out.println(tree.breadthFirst(tree));
+//        BinaryTree tree = new BinaryTree();
+//        tree.root = new NodeT(10);
+//        tree.root.left = new NodeT(22);
+//        tree.root.right = new NodeT(0);
+//        tree.root.left.left = new NodeT(39);
+//        tree.root.left.left.left = new NodeT(69);
+//        tree.root.left.right = new NodeT(1);
+//        tree.root.left.right.right = new NodeT(7);
+//        System.out.println(tree.breadthFirst(tree));
 //        tree.preOrder(tree.root);
 //        System.out.println("\n");
 //        tree.inOrder(tree.root);
@@ -21,6 +21,20 @@ public class Library {
 //        tree.postOrder(tree.root);
 //        System.out.println("\n");
 
+        K_Ary<Integer> tree1 = new K_Ary<>();
+        tree1.root = new NodeK<>(10);
+        tree1.root.child.add(new NodeK<>(2));
+        tree1.root.child.add(new NodeK<>(30));
+        tree1.root.child.add(new NodeK<>(56));
+        tree1.root.child.add(new NodeK<>(100));
+        tree1.root.child.get(0).child.add(new NodeK<>(77));
+        tree1.root.child.get(0).child.add(new NodeK<>(88));
+        tree1.root.child.get(2).child.add(new NodeK<>(1));
+        tree1.root.child.get(3).child.add(new NodeK<>(7));
+        tree1.root.child.get(3).child.add(new NodeK<>(8));
+        tree1.root.child.get(3).child.add(new NodeK<>(9));
+
+        tree1.fizzBuzzTree(tree1);
 //        tree.add(6);
 //        tree.add(10);
 //        tree.add(8);

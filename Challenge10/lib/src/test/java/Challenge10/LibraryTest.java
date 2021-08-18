@@ -89,10 +89,7 @@ class LibraryTest {
         animalShelter.enQueue(dog2);
         animalShelter.enQueue(cat2);
 
-
-
         assertEquals(2,animalShelter.dogQueue.size());
-
 
         assertEquals(2,animalShelter.catQueue.size());
 
@@ -169,5 +166,21 @@ class LibraryTest {
         assertFalse(bracket.validateBrackets(str2));
         assertFalse(bracket.validateBrackets(str3));
         assertTrue(bracket.validateBrackets(str4));
+    }
+
+    @Test void kary(){
+        K_Ary<Integer> tree1 = new K_Ary<>();
+        tree1.root = new NodeK<>(10);
+        tree1.root.child.add(new NodeK<>(2));
+        tree1.root.child.add(new NodeK<>(30));
+        tree1.root.child.add(new NodeK<>(56));
+        tree1.root.child.add(new NodeK<>(100));
+        tree1.root.child.get(0).child.add(new NodeK<>(77));
+        tree1.root.child.get(0).child.add(new NodeK<>(88));
+        tree1.root.child.get(2).child.add(new NodeK<>(1));
+        tree1.root.child.get(3).child.add(new NodeK<>(7));
+        tree1.root.child.get(3).child.add(new NodeK<>(8));
+        tree1.root.child.get(3).child.add(new NodeK<>(9));
+        tree1.fizzBuzzTree(tree1);
     }
 }
