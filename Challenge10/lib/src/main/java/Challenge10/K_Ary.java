@@ -10,7 +10,7 @@ public class K_Ary<T> {
     public K_Ary() {
     }
 
-    public void  fizzBuzzTree(K_Ary<T> tree) {
+    public void fizzBuzzTree(K_Ary<T> tree) {
         String newValue;
         if (tree.root == null)
             return;
