@@ -23,3 +23,4 @@
 |     Challenge 27          |   [Challenge27](Challenge27/readme.md) |
 |     Challenge 28          |   [Challenge28](Challenge28/readme.md) |
 |     Challenge 30          |   [Challenge30](Challenge30/readme.md) |
+|     Challenge 31          |   [Challenge31](Challenge31/readme.md) |
