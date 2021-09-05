@@ -5,9 +5,12 @@ package Challenge30;
 //https://www.youtube.com/watch?v=1fEMyNXZynw
 //https://www.youtube.com/watch?v=bBKu9gJr_y0
 
+import java.util.Hashtable;
+
 public class HashTable<T> {
     Entry<T>[] arrayHash;
     int size;
+
 
     public HashTable(int size) {
         this.size = size;
@@ -53,5 +56,25 @@ public class HashTable<T> {
 
     int hash(int key) {
         return key % size;
+    }
+
+    public String repeatedWord(String s){
+        s=s.toLowerCase();
+        String[] str = s.split(" ");
+        Hashtable<String,Integer> words = new Hashtable<>();
+        for(int i = 0 ; i< str.length;i++){
+            if (words.containsKey(str[i])) {
+                words.put(str[i], words.get(str[i]) + 1);
+            }
+            else
+                words.put(str[i],1);
+        }
+        for (int i=0; i<str.length; i++) {
+            int count = words.get(str[i]);
+            if (count > 1) {
+                return str[i];
+            }
+        }
+        return "No Repetition";
     }
 }
