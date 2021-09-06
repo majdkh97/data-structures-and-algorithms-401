@@ -5,12 +5,16 @@ package Challenge30;
 //https://www.youtube.com/watch?v=1fEMyNXZynw
 //https://www.youtube.com/watch?v=bBKu9gJr_y0
 
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 
 public class HashTable<T> {
     Entry<T>[] arrayHash;
     int size;
 
+    Hashtable<Integer,Integer> interSection = new Hashtable<>();
+    List<Integer> treeIntersectionList = new ArrayList<>();
 
     public HashTable(int size) {
         this.size = size;
@@ -76,5 +80,23 @@ public class HashTable<T> {
             }
         }
         return "No Repetition";
+    }
+
+    public void preOrder(Node node)
+    {
+        if (node == null)
+            return;
+        if(interSection.containsKey(node.value))
+            treeIntersectionList.add(node.value);
+        else
+            interSection.put(node.value,1);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public List<Integer> treeIntersection(BinaryTree tree1,BinaryTree tree2){
+        preOrder(tree1.root);
+        preOrder(tree2.root);
+        return treeIntersectionList;
     }
 }
