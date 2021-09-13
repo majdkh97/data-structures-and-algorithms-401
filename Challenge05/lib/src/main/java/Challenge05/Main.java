@@ -4,9 +4,32 @@ public class Main {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.append(1);
+        list.append(1);
         list.append(2);
         list.append(3);
+        list.append(3);
         list.append(4);
+        list.append(4);
+        list.append(5);
+        list.append(5);
+        list.append(5);
+//        list.append(6);
+//        list.append(4);
+//        list.append(3);
+//        list.append(2);
+//        list.append(1);
+//        list.insert(10);
+//        list.insert(20);
+//        list.append(30);
+//        list.insertAfter(4,5);
+//        System.out.println(list.palindrome(list));
+//        list.remove(4);
+        list.removeDuplicate1();
+        list.remove(5);
+//        list.reverse(list);
+        System.out.println(list.toString1());
+//        System.out.println(list.kthfromend1(1));
+
 
 
 //        boolean includes = list.includes(5);
@@ -54,7 +77,7 @@ public class Main {
 //        System.out.println(zipOutput.toString1());
 
 //        list.print();
-        System.out.println(list.palindrome(list));
+//        System.out.println(list.palindrome(list));
 
     }
 
